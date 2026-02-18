@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    background-color: #fff;
+}
+
+.navbar {
+    border-bottom: 2px solid #eee;
+    padding: 10px 0;
+}
+
+.nav-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.nav-logos {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-logos img { height: 40px; }
+.logo-text { font-size: 1.5rem; color: #666; }
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.nav-menu a.active { color: #000; border-bottom: 3px solid #ddd; }
+
+.main-logo-area {
+    display: grid;
+    justify-items: center;
+    padding: 40px 20px;
+    text-align: center;
+    gap: 15px;
+}
+
+.logo-central {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-central img { width: 60px; }
+.logo-central h1 { font-size: 3.5rem; color: #555; }
+
+.btn-accedir {
+    border: 1px solid #3b71ca;
+    background: transparent;
+    color: #3b71ca;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.grid-mosaico {
+    display: grid;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.box {
+    height: 140px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s;
+}
+
+.box:hover { opacity: 0.85; }
+
+.naranja { background-color: #d17a2d; }
+.morado { background-color: #8e6294; }
+.azul-oscuro { background-color: #1b5e67; }
+.verde-claro { background-color: #a8cf66; }
+.verde-fuerte { background-color: #26a67a; }
+.rosa { background-color: #e95e8b; }
+.lila { background-color: #c094c3; }
+.gris { background-color: #555c63; }
+.turquesa { background-color: #4bd9b3; }
+.granate { background-color: #b03a48; }
+.rojo { background-color: #e53935; }
+.azul-mar { background-color: #4b89bc; }
+.cian { background-color: #64d4e4; }
+
+.grid-mosaico div:nth-child(7) { grid-column: span 1; } 
+
+.noticies {
+    max-width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.noticies h2 { color: #8a99ff; font-size: 2rem; margin-bottom: 30px; }
+
+.grid-noticies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.noticia-card {
+    border: 1px solid #3b71ca;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.noticia-card h3 { color: #3b71ca; font-size: 1rem; margin-bottom: 10px; }
+.fecha { color: #999; font-size: 0.8rem; margin-bottom: 10px; }
+
+.btn-mes {
+    margin-top: 30px;
+    background-color: #82a9ff;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .grid-mosaico { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .grid-mosaico { grid-template-columns: 1fr; }
+    .nav-container { grid-template-columns: 1fr; justify-items: center; gap: 10px; }
+    .nav-menu { display: none; }
+}
+.grid-mosaico {
+    display: grid;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-auto-rows: 150px; 
+    gap: 05px; }
+
+.box {
+    width: 100%;
+    height: 100%;     border-radius: 8px;
+    overflow: hidden;}
+
+.grid-mosaico .box:nth-child(2) { grid-column: span 2; }
+.grid-mosaico .box:nth-child(8) { grid-column: span 2; }
+.grid-mosaico .box:nth-child(13) { grid-column: span 2; }
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
